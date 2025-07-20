@@ -6,16 +6,16 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class GetSalaryInfo {
-    public String getSalaryInfo(String[] names, String[] data, String dateFrom, String dateTo) {
+    public String getSalaryInfo(String[] names, String[] data, String dateFrom, String dateto) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         LocalDate from = LocalDate.parse(dateFrom, formatter);
-        LocalDate To = LocalDate.parse(dateTo, formatter);
+        LocalDate To = LocalDate.parse(dateto, formatter);
 
         StringBuilder report = new StringBuilder();
         report.append("Report for period ")
                 .append(dateFrom)
                 .append(" - ")
-                .append(dateTo)
+                .append(dateto)
                 .append(System.lineSeparator());
 
         for (String name : names) {
